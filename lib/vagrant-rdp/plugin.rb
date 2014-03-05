@@ -1,7 +1,7 @@
 begin
   require "vagrant"
 rescue LoadError
-  raise "The Vagrant AWS plugin must be run within Vagrant."
+  raise "The Vagrant RDP plugin must be run within Vagrant."
 end
 
 module VagrantPlugins
@@ -11,6 +11,10 @@ module VagrantPlugins
       description <<-DESC
       With this plugin, you can connect to windows VM by remote desktop connection.
       DESC
+
+      config(:rdp) do
+        Config
+      end
 
       command "rdp" do
         Command

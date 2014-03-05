@@ -55,8 +55,8 @@ EOS
         File.open(path, "w") { |io|
           io.puts <<EOF
 screen mode id:i:0
-desktopwidth:i:1024
-desktopheight:i:768
+desktopwidth:i:#{vm.config.rdp.width}
+desktopheight:i:#{vm.config.rdp.height}
 use multimon:i:1
 session bpp:i:32
 full address:s:localhost:#{rdpport}
