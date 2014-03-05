@@ -32,7 +32,7 @@ module VagrantPlugins
           rdp_file = rdp_file(vm, rdpport)
 
           tf.puts <<EOS
-open -W -a "/Applications/Microsoft Remote Desktop.app/Contents/MacOS/Microsoft Remote Desktop" "#{rdp_file}"
+open -a "/Applications/Microsoft Remote Desktop.app/Contents/MacOS/Microsoft Remote Desktop" "#{rdp_file}"
 sleep 5 #HACK
 rm "#{rdp_file}"
 EOS
