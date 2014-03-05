@@ -1,24 +1,26 @@
-# Vagrant::Rdp
+# vagrant-rdp
 
-TODO: Write a gem description
+With this plugin, you can connect to windows VM by remote desktop connection.
 
-## Installation
+# Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'vagrant-rdp'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-rdp
+```
+$ vagrant plugin install vagrant-rdp
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the following to your Vagrantfile of Windows guest
+
+```
+config.vm.network :forwarded_port, guest: 3389, host: 33389, auto_correct: true
+```
+
+Now you can connect to windows guest by following command
+
+```
+$ vagrant rdp
+```
 
 ## Contributing
 
