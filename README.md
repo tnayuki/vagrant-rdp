@@ -29,6 +29,12 @@ config.rdp.width  = 1440 # default: 1024
 config.rdp.height = 900  # default: 768
 ```
 
+Moreover you can enable/disable the multimonitor feature by adding
+```
+config.rdp.multimon = 0 # 1: enable, 0: disable, default: 1
+```
+into your `Vagrantfile`.
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/vagrant-rdp/fork )

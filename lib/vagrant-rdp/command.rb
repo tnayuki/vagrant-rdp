@@ -57,7 +57,7 @@ EOS
 screen mode id:i:0
 desktopwidth:i:#{vm.config.rdp.width}
 desktopheight:i:#{vm.config.rdp.height}
-use multimon:i:1
+use multimon:i:#{vm.config.rdp.multimon}
 session bpp:i:32
 full address:s:localhost:#{rdpport}
 audiomode:i:0
